@@ -12,4 +12,4 @@ EXPOSE 8080
 
 VOLUME ["/data"]
 VOLUME ["/import"]
-ENTRYPOINT ["/usr/bin/calibre-server", "/data"]
+CMD ["/usr/bin/calibre-server", "/data"]
