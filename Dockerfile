@@ -5,11 +5,11 @@ RUN apt-get update -y \
   && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin \
   && apt-get clean \
   && rm -rf /var/cache/apt/* /var/lib/apt/lists/* \
-  && mkdir /data \
+  && mkdir /books \
   && mkdir /import
 
 EXPOSE 8080
 
-VOLUME ["/data"]
+VOLUME ["/books"]
 VOLUME ["/import"]
-CMD ["/usr/bin/calibre-server", "/data"]
+CMD ["/usr/bin/calibre-server", "/books"]
