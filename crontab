@@ -1,0 +1,1 @@
+*/10 * * * * xvfb-run calibredb add /import -r --with-library /books && rm /import*
